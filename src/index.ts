@@ -48,9 +48,12 @@ const sortedOutput =
       );
     });
 
+const bestRatio = sortedOutput[0];
 console.log(
-  `Best dimensions: ${sortedOutput[0].width}w x ${sortedOutput[0].height}h (${
-    sortedOutput[0].squares
-  } total squares with ${sortedOutput[0].squares - 365} leftovers)`
+  `Best dimensions: ${bestRatio.width}w x ${bestRatio.height}h (${
+    bestRatio.squares
+  } total squares with ${bestRatio.squares - 365} leftovers) with a ratio of ${
+    bestRatio.ratio
+  }`
 );
 console.log("done");
